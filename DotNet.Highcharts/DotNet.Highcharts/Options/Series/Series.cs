@@ -45,12 +45,34 @@ namespace DotNet.Highcharts.Options.Series
 		/// </summary>
 		public Number? Colsize { get; set; }
 
+	    /// <summary>
+	    /// The row size - how many Y axis units each heatmap row should span.
+	    /// </summary>
+	    public Number? Rowsize { get; set; }
+
+        /// <summary>
+        /// The width of the border surrounding each column or bar. Defaults to 1 when there is room for a border, but to 0 when the columns are so dense that a border would cover the next column.
+        /// </summary>
+	    public Number? BorderWidth { get; set; }
+
 		/// <summary>
 		/// The color applied to null points.
 		/// </summary>
 		public Color? NullColor { get; set; }
 
-		/// <summary>
+        /// <summary>
+        /// When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to 0 disable.
+        /// </summary>
+	    public Number? TurboThreshold { get; set; }
+
+        /// <summary>
+        /// Set the point threshold for when a series should enter boost mode.
+        /// Setting it to e.g. 2000 will cause the series to enter boost mode when there are 2000 or more points in the series.
+        /// To disable boosting on the series, set the boostThreshold to 0. Setting it to 1 will force boosting.
+        /// </summary>
+	    public Number? BoostThreshold { get; set; }
+
+	    /// <summary>
 		/// A configuration object for the tooltip rendering of each single series.
 		/// </summary>
 		public Tooltip Tooltip { get; set; }
@@ -86,6 +108,16 @@ namespace DotNet.Highcharts.Options.Series
 		public Color? Color { get; set; }
 
 		public Color? UpColor { get; set; }
+
+	    public bool? DraggableX { get; set; }
+	    public bool? DraggableY { get; set; }
+	    public double? DragMaxX { get; set; }
+	    public double? DragMaxY { get; set; }
+	    public double? DragMinX { get; set; }
+	    public double? DragMinY { get; set; }
+	    public double? DragPrecisionX { get; set; }
+	    public double? DragPrecisionY { get; set; }
+	    public Point Point { get; set; }
 
 		/// <summary>
 		/// Gets or sets the series' visibility state.

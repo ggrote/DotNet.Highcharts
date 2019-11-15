@@ -49,6 +49,11 @@ namespace DotNet.Highcharts.Options.PlotOptions
 		[JsonFormatter("{0}")]
 		public string Update { get; set; }
 
+	    [JsonFormatter("{0}")]
+	    public string Drag { get; set; }
+
+	    [JsonFormatter("{0}")]
+	    public string Drop { get; set; }
 	}
 
 }

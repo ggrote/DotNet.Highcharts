@@ -64,6 +64,11 @@ namespace DotNet.Highcharts.Options
 		/// </summary>
         public Object Y { get; set; }
 
+        /// <summary>
+        /// The value of the point. Defaults to null
+        /// </summary>
+	    public Object Value { get; set; }
+
 		public Drilldown Drilldown { get; set; }
 
 		public bool? Selected { get; set; }
